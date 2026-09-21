@@ -12,6 +12,6 @@ const server = http.createServer((req, res) => {
 
  res.end(JSON.stringify(peliculas));
 });
-server.listen(3000, '0.0.0.0', () => {
+server.listen(process.env.PORT || 3000, '0.0.0.0', () => {
   console.log('API escuchando en puerto 3000');
 });;
